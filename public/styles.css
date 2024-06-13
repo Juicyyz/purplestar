@@ -81,7 +81,7 @@ header {
     background-image: linear-gradient(to right, #ffcaca, #ffedc1, #c4ffcb, #c8e5ff, #ffcaca);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: rainbow-animation 200s linear infinite;
+    animation: rainbow-animation 400s linear infinite;
 }
 
 @keyframes rainbow-animation {

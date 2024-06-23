@@ -40,9 +40,9 @@
   </body>
 
   <script type="module">
-    // create an array and add some questions and answes
-    // note arrays are zero based. That means array [0] is the first one
     var currentquestion = 0;
+
+    // array with all questions
     var questions = [
       {
         question: "'My identity is not worth stealing!'",
@@ -74,7 +74,6 @@
     ];
 
     (function () {
-      // your page initialization code here
       fnReset(); //call reset on document ready
 
       document
@@ -105,17 +104,18 @@
         });
     })();
 
+    // provides a clean slate for everything to display
     function fnReset() {
       document.getElementById("questionresponse").classList.add("hide");
       document.getElementById("nextquestion").classList.add("hide");
       document.getElementById("reset").classList.add("hide");
       document.getElementById("questionbox").classList.remove("hide");
-      // document.getElementById("answerbox").classList.remove("hide");
       currentquestion = 0;
       document.getElementById("questiontext").innerHTML =
         questions[currentquestion].question;
     }
 
+    //cycles to next question
     function fnNext() {
       document.getElementById("questionresponse").classList.add("hide");
       if (currentquestion < questions.length - 1) {
@@ -132,6 +132,7 @@
         questions[currentquestion].question;
     }
 
+    // answer part after clicking either true or false
     function fnCheck(answer) {
       document
         .getElementById("questionresponse")

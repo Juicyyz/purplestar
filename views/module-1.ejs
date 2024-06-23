@@ -8,9 +8,6 @@
       <!-- POPUP -->
       <div class="popup" id="popup 1" class="popup 1" style="border-radius: 30px">
 
-
-        <!-- <button id="status-btn-1" style="margin-top: 14px">Mark As Done?</button> -->
-
         <div class="sub-module-status-div">
 
           <button id="close-btn-1" class="close-btn" onclick="document.getElementById('popup 1').style.display = 'none'; 
@@ -360,10 +357,6 @@
             Are you a TARGET?
           </p>
           <br />
-          <!-- <p onclick="/* document.getElementById('popup 1').style.display = 'block';
-                   document.getElementById('popupsidedark').style.display = 'block'; */">
-            Sub Module 4
-          </p> -->
           <br />
         </div>
 
@@ -380,206 +373,6 @@
   </body>
 
   <script type="module">
-
-    // const statusJSONModule1 = {
-    //   doneModule1: [],
-    // };
-
-    /*
-    function getItemTEST() {
-      const getData = JSON.parse(localStorage.getItem("statusForModule1"));
-      console.log(Object.values(getData["doneModule1"]))
-    }
-
-    document.getElementById("").addEventListener("click", function () {
-      checkIfInLocalStorage(
-        "statusForModule1",
-        statusJSONModule1,
-        "status-btn-1",
-        "subModule1"
-      );
-    });
-
-    document.getElementById("status-btn-1").addEventListener("click", function () {
-      const getData = JSON.parse(localStorage.getItem("statusForModule1"));
-      var lenOfModules = Object.values(getData["doneModule1"]).length;
-
-      document.getElementById(
-        "moduleCompletionStatus"
-      ).innerText = `${lenOfModules}/5`;
-    }); 
-
-    window.addEventListener("load", (event) => {
-      const getData = JSON.parse(localStorage.getItem("statusForModule1"));
-      var lenOfModules = Object.values(getData["doneModule1"]).length;
-
-      console.log(JSON.stringify(statusJSONModule1));
-
-      document.getElementById(
-        "moduleCompletionStatus"
-      ).innerText = `${lenOfModules}/5`;
-    });
-
-    turnColor("submodule1btn", "status-btn-1", "subModule1");
-    turnColor("submodule2btn", "status-btn-2", "subModule2");
-    turnColor("submodule3btn", "status-btn-3", "subModule3");
-
-    completionStatusFunc("status-btn-1");
-    completionStatusFunc("status-btn-2");
-    completionStatusFunc("status-btn-3");
-    window.addEventListener("load", (event) => {
-      checkIfInLocalStorage(
-        "statusForModule1",
-        statusJSONModule1,
-        "status-btn-1",
-        "subModule1"
-      ); 
-    });
-    completeOnClick(
-      "statusForModule1",
-      statusJSONModule1,
-      "status-btn-1",
-      "subModule1"
-    );
-
-    completeOnClick(
-      "statusForModule1",
-      statusJSONModule1,
-      "status-btn-2",
-      "subModule2"
-    );
-
-    completeOnClick(
-      "statusForModule1",
-      statusJSONModule1,
-      "status-btn-3",
-      "subModule3"
-    );
-
-    function turnColor(submoduleP_element, statusBtn, subModuleName) {
-      document
-        .getElementById(submoduleP_element)
-        .addEventListener("click", function () {
-          if (
-            checkIfInLocalStorage(
-              "statusForModule1",
-              statusJSONModule1,
-              statusBtn,
-              subModuleName
-            )
-          )
-            document.getElementById(statusBtn).style.backgroundColor = "green";
-        });
-    }
-
-    function completionStatusFunc(statusBtn) {
-      document.getElementById(statusBtn).addEventListener("click", function () {
-        const getData = JSON.parse(localStorage.getItem("statusForModule1"));
-        var lenOfModules = Object.values(getData["doneModule1"]).length;
-        //console.log(lenOfModules);
-
-        document.getElementById(
-          "moduleCompletionStatus"
-        ).innerText = `${lenOfModules}/5`;
-      });
-    }
-    // FUNCTIONS
-    function completeOnClick(keyName, json, id, subModuleName) {
-      document.getElementById(id).addEventListener("click", function (e) {
-        if (storageAvailable("localStorage")) {
-          //LOCAL STORAGE IS AVAILABLE
-          localStorage.setItem(keyName, JSON.stringify(json));
-
-          const getData = JSON.parse(localStorage.getItem(keyName));
-          console.log(getData["doneModule1"]);
-
-          // if has subModuleName in localstoragearr
-          if (!Object.values(getData["doneModule1"]).includes(subModuleName)) {
-            // addToJSON(json, subModuleName);
-            json["doneModule1"].push(subModuleName);
-            localStorage.setItem(keyName, JSON.stringify(json));
-            changeColorToGreen(subModuleName, id);
-          } else {
-            // removeFromJSON(json, subModuleName);
-            //console.log(getData);
-            
-            let deleted = _.remove(json["doneModule1"], function (n) {
-              if(!n === subModuleName){
-                return null;
-              };
-            });
-            window.location.reload();
-            localStorage.setItem(keyName, JSON.stringify(json));
-          }
-
-          //console.log(json["doneModule1"].indexOf(subModuleName));
-        } else {
-          //LOCAL STORAGE IS NOT AVAILABLE
-          console.log("ERROR! NO SPACE IN LOCALSTORAGE!");
-        }
-      });
-    }
-
-    function checkIfInLocalStorage(keyName, json, btnId, subModuleName) {
-      const getData = JSON.parse(localStorage.getItem("statusForModule1"));
-      if (Object.values(getData["doneModule1"]).includes(subModuleName)) {
-        return true;
-      }
-    }
-
-    function addToJSON(json, subModuleName) {
-      json["doneModule1"].push(subModuleName);
-    }
-
-    function removeFromJSON(json, subModuleName) {
-      //var toBeRemoved = json["doneModule1"].indexOf(subModuleName);
-
-      let deleted = _.remove(json["doneModule1"], function (n) {
-        return n === subModuleName;
-      });
-      console.log(json["doneModule1"])
-    }
-
-    function changeColorToGreen(subModuleName, id) {
-      const getData = JSON.parse(localStorage.getItem("statusForModule1"));
-      const button = document.getElementById(id);
-      if (Object.values(getData["doneModule1"]).includes(subModuleName)) {
-        button.style.backgroundColor = "green";
-      } else {
-        button.style.backgroundColor = "gray";
-      }
-    } */
-
-    /* document.getElementById("sub-module-1").addEventListener("click", function (e) {
-      isChecked("sub-module-1", "checkbox-message-1");
-      saveCheckboxStatus();
-    })
-
-    document.getElementById("sub-module-2").addEventListener("click", function (e) {
-      isChecked("sub-module-2", "checkbox-message-2");
-      saveCheckboxStatus();
-    })
-
-    document.getElementById("sub-module-3").addEventListener("click", function (e) {
-      isChecked("sub-module-3", "checkbox-message-3");
-      saveCheckboxStatus();
-    }) */
-
-    /* document.getElementById("close-btn-1").addEventListener("click", function (e) {
-      window.location.reload(true);
-    }) */
-
-    /*  window.onload = (e) => {
-       if (document.getElementById("checkbox-message-1").checked) {
-         console.log(true)
-       } else {
-         console.log(false)
-       } 
-       loadCheckboxStates();
-       isChecked("sub-module-1", "checkbox-message-1");
-       isChecked("sub-module-2", "checkbox-message-2");
-       isChecked("sub-module-3", "checkbox-message-3");
-     } */
 
     // Attach event listener to the checkboxes to save their states
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -599,23 +392,8 @@
       isChecked("1stM-sub-module-6", "checkbox-message-6");
       isChecked("1stM-sub-module-7", "checkbox-message-7");
     })
-    //document.addEventListener('DOMContentLoader', addToList());
 
-    /* function addToList() {
-      Object.keys(localStorage).forEach(function (key) {
-        let numOfModules = 0;
-        // console.log(localStorage.getItem(key));
-        if (key.includes("1stM")) {
-          if (localStorage.getItem(key) == true) {
-            numOfModules++;
-            document.getElementById(
-              "moduleCompletionStatus"
-            ).innerText = `${numOfModules}/3`;
-          }
-        }
-      });
-    } */
-
+    // change the text of the checkbox
     function isChecked(checkboxID, checkboxMessage,) {
       if (document.getElementById(checkboxID).checked) {
         document.getElementById(checkboxMessage).textContent = "Completed";
@@ -624,6 +402,7 @@
       }
     }
 
+    // saves the checkbox statuses in local storage
     function saveCheckboxStates() {
       const checkboxes = document.querySelectorAll('input[type="checkbox"]');
       checkboxes.forEach((checkbox) => {
@@ -644,6 +423,7 @@
       })
     }
 
+    // function to load the checkbox statuses on reload
     function loadCheckboxStates() {
       const checkboxes = document.querySelectorAll('input[type="checkbox"]');
       checkboxes.forEach((checkbox) => {
@@ -654,6 +434,7 @@
       });
     }
 
+    // checking the storage of local storage
     function storageAvailable(type) {
       let storage;
       try {
@@ -669,7 +450,6 @@
           (e.code === 22 ||
             // Firefox
             e.code === 1014 ||
-            // test name field too, because code might not be present
             // everything except Firefox
             e.name === "QuotaExceededError" ||
             // Firefox

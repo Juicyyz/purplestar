@@ -3,18 +3,7 @@ const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
 const dotenv = require("dotenv");
-/* const _ = require('lodash');
-app.locals._ = _; */
 
-/* exports.index = function(req, res){
-res.render('quiz-1', {lodash: lodash})
-} */
-/* import dotenv from "dotenv";
-//const nano = require("nano")("http://localhost:5984");
-import bodyParser from "body-parser";
-import mysql from "mysql";
-import dotenv from "dotenv";
-*/
 let PORT;
 
 const app = express();
@@ -22,14 +11,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-dotenv.config()
-
-/* const connection = mysql.createConnection({
-host: "localhost",
-user: "dbuser",
-password: "dabonemhaters",
-database: "my_db",
-}); */
+dotenv.config()                 
 
 process.env.STATUS === "production"
 ? (PORT = process.env.DEV_PORT)

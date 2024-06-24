@@ -116,7 +116,7 @@
 
   <script type="module">
 
-    // Attach event listener to the checkboxes to save their states
+    // Attach event listener to the checkboxes to save their states -- ln 119 to 124, ln 162 to 170 -- CODE FROM https://stackoverflow.com/questions/76801414/how-can-i-retain-my-checkbox-status-even-if-i-refresh-the-page
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((checkbox) => {
       checkbox.addEventListener('change', saveCheckboxStates);

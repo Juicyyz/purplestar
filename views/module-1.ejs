@@ -374,11 +374,10 @@
 
   <script type="module">
 
-    // Attach event listener to the checkboxes to save their states
+    // Attach event listener to the checkboxes to save their states -- ln 377 to 381, ln 425 to 434 -- CODE FROM https://stackoverflow.com/questions/76801414/how-can-i-retain-my-checkbox-status-even-if-i-refresh-the-page
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((checkbox) => {
       checkbox.addEventListener('change', saveCheckboxStates);
-
     });
 
     // Load checkbox states on page load
@@ -423,7 +422,7 @@
       })
     }
 
-    // function to load the checkbox statuses on reload
+    // function to load the checkbox statuses on reload 
     function loadCheckboxStates() {
       const checkboxes = document.querySelectorAll('input[type="checkbox"]');
       checkboxes.forEach((checkbox) => {
@@ -434,7 +433,7 @@
       });
     }
 
-    // checking the storage of local storage
+    // checking the storage of local storage -- ln 437 to 462 -- CODE FROM https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API"
     function storageAvailable(type) {
       let storage;
       try {
@@ -459,7 +458,7 @@
           storage.length !== 0
         );
       }
-    }
+    } 
   </script>
 
 </html>
